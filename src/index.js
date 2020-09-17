@@ -3,12 +3,29 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import { GlobalStyles } from "./globalStyles";
+import { FirebaseContext } from "./context/firebaseContext";
 // import * as serviceWorker from "./serviceWorker";
+
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const config = {
+  apiKey: "AIzaSyAQgAUcpnpArgun8L8Gbso7YcFBLbpkH2E",
+  authDomain: "netflix-2438f.firebaseapp.com",
+  databaseURL: "https://netflix-2438f.firebaseio.com",
+  projectId: "netflix-2438f",
+  storageBucket: "netflix-2438f.appspot.com",
+  messagingSenderId: "1095683748444",
+  appId: "1:1095683748444:web:d91c2076109be089bfac99",
+  measurementId: "G-DF7TR5XXK3",
+};
+
+// const firebase = window.firebase.initializeApp(config);
 
 ReactDOM.render(
   <>
-    <GlobalStyles />
-    <App />
+    <FirebaseContext.Provider value={{ firebase: window.firebase }}>
+      <GlobalStyles />
+      <App />
+    </FirebaseContext.Provider>
   </>,
   document.getElementById("root")
 );
