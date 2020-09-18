@@ -1,5 +1,37 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Codebase Architecture
+
+### Assets
+
+Saved in -> public/images || public/videos
+
+### Code Structure
+
+Inside src folder
+
+- components: Compounded Compount and the style e.g. form, card, accordion (Splitted Molecules / Organism)
+
+- containers: Organism being composited in here in order to split the code (redability + reusability)
+
+- hooks: Custom hooks e.g. useContent.js (Do async operation and retrieve data to return etc.)
+
+- context: Context API files e.g. FeatureContext for Card component (Provide implicit props for a component)
+
+- pages: Actual Page that renders Containers.
+
+- helpers
+
+- utils: Custom JavaScript only files e.g. selectionMap.js (Maybe used for doing data allocation.)
+
+- fixtures: json files used to drain data to the database
+
+- constants: Constant variables like Routes url are saved here.
+
+
+
+
+
 ## Available Scripts
 
 In the project directory, you can run:
