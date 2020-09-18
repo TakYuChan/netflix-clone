@@ -9,7 +9,7 @@ import FooterContainer from "./footer.container";
 export default function BrowseContainer({ slides }) {
   const [category, setCategory] = useState("series");
   const [profile, setProfile] = useState({});
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState("");
   const [slideRows, setSlideRows] = useState([]);
 
@@ -44,7 +44,7 @@ export default function BrowseContainer({ slides }) {
     }
   }, [searchTerm]);
 
-  return !profile.displayName ? (
+  return profile.displayName ? (
     <>
       {loading ? <Loading src={user.photoURL} /> : <Loading.ReleaseBody />}
       <Header src="joker1" dontShowOnSmallViewPort>

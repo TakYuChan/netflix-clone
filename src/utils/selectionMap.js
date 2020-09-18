@@ -1,5 +1,3 @@
-import { Profiles } from "../components";
-
 export default function selectionMap({ series, films }) {
   return {
     series: [
