@@ -16,7 +16,6 @@ S.Container = styled.div`
   flex-direction: column;
   margin-bottom: 50px;
   box-sizing: border-box;
-  border: 2px solid red;
 
   > ${S.Title} {
     @media (max-width: 1000px) {
@@ -66,7 +65,6 @@ S.Text = styled.p`
 S.Entities = styled.div`
   display: flex;
   flex-direction: row;
-  width: 100%;
 `;
 
 S.Meta = styled.div`
@@ -102,7 +100,7 @@ S.Item = styled.div`
 
   @media (min-width: 1000px) {
     &:hover ${S.Meta}, &:hover ${S.Text}, &:hover ${S.SubTitle} {
-      //   display: block;
+      display: block;
       z-index: 100;
     }
   }
@@ -182,7 +180,7 @@ S.FeatureClose = styled.button`
   }
 `;
 
-S.Content = styled.p`
+S.Content = styled.div`
   margin: 56px;
   max-width: 500px;
   line-height: normal;

@@ -1,5 +1,6 @@
 import React, { useState, useContext, useEffect } from "react";
-import { Header, Loading, Card } from "../components";
+import Fuse from "fuse.js";
+import { Header, Loading, Card, Player } from "../components";
 import * as ROUTES from "../constants/routes.constants";
 import { FirebaseContext } from "../context/firebaseContext";
 import SelectProfileContainer from "./profiles.container";
@@ -8,7 +9,7 @@ import FooterContainer from "./footer.container";
 export default function BrowseContainer({ slides }) {
   const [category, setCategory] = useState("series");
   const [profile, setProfile] = useState({});
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
   const [slideRows, setSlideRows] = useState([]);
 
@@ -19,15 +20,29 @@ export default function BrowseContainer({ slides }) {
     photoURL: "1",
   };
 
-  //   useEffect(() => {
-  //     setTimeout(() => {
-  //       setLoading(false);
-  //     }, 3000);
-  //   }, [user]);
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 3000);
+  }, [user]);
 
   useEffect(() => {
     setSlideRows(slides[category]);
   }, [slides, category]);
+
+  useEffect(() => {
+    const fuse = new Fuse(slideRows, {
+      keys: ["data.description", "data.title", "data.genre"],
+    });
+    const results = fuse.search(searchTerm).map(({ item }) => item);
+    console.log({ results });
+
+    if (slideRows.length > 0 && searchTerm.length > 3 && results.length > 0) {
+      setSlideRows(results);
+    } else {
+      setSlideRows(slides[category]);
+    }
+  }, [searchTerm]);
 
   return !profile.displayName ? (
     <>
@@ -105,9 +120,7 @@ export default function BrowseContainer({ slides }) {
                 </Card.Item>
               ))}
             </Card.Entities>
-            <Card.Feature category={category}>
-              <p>I am the feature!</p>
-            </Card.Feature>
+            <Card.Feature category={category}></Card.Feature>
           </Card>
         ))}
       </Card.Group>
