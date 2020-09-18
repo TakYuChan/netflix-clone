@@ -19,11 +19,11 @@ export default function BrowseContainer({ slides }) {
     photoURL: "1",
   };
 
-  useEffect(() => {
-    setTimeout(() => {
-      setLoading(false);
-    }, 3000);
-  }, [user]);
+  //   useEffect(() => {
+  //     setTimeout(() => {
+  //       setLoading(false);
+  //     }, 3000);
+  //   }, [user]);
 
   useEffect(() => {
     setSlideRows(slides[category]);
@@ -105,6 +105,9 @@ export default function BrowseContainer({ slides }) {
                 </Card.Item>
               ))}
             </Card.Entities>
+            <Card.Feature category={category}>
+              <p>I am the feature!</p>
+            </Card.Feature>
           </Card>
         ))}
       </Card.Group>
