@@ -7,6 +7,7 @@ import { FirebaseContext } from "./context/firebaseContext";
 import firebase from "firebase/app";
 import "firebase/firestore";
 import "firebase/auth";
+// import { seedDatabase } from "./seed";
 // import * as serviceWorker from "./serviceWorker";
 
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
@@ -21,11 +22,14 @@ const config = {
   measurementId: "G-DF7TR5XXK3",
 };
 
-const firebase2 = firebase.initializeApp(config);
+firebase.initializeApp(config);
+
+// const auth = firebase.auth();
+// const firestore = firebase.firestore();
 
 ReactDOM.render(
   <>
-    <FirebaseContext.Provider value={{ firebase2 }}>
+    <FirebaseContext.Provider value={{ firebase }}>
       <GlobalStyles />
       <App />
     </FirebaseContext.Provider>
