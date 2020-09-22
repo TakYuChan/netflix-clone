@@ -30,10 +30,10 @@ Inside src folder
 
 ### State Management Evolvement
 
-##Stage 1: redux + reselect<br/>
+## Stage 1: redux + reselect<br/>
 ![GitHub Logo](/public/images/markdown/stageManagement/reduxReselect.jpg)
 
-##Stage 2: Added Hooks and context<br/>
+## Stage 2: Added Hooks and context<br/>
 ![GitHub Logo](/public/images/markdown/stageManagement/hooksContext.jpg)
 
 Get rid of class component by using hooks in the functional component.
@@ -45,7 +45,7 @@ Why not Context API: Context API is designed to be used to low update rate data.
 
 ### Component Design Evolvement
 
-##Stage 1: Big chunk of component makes use of prop drilling<br/>
+## Stage 1: Big chunk of component makes use of prop drilling<br/>
 ![GitHub Logo](/public/images/markdown/stageManagement/oldComponentDesign.jpg)<br/>
 ![GitHub Logo](/public/images/markdown/stageManagement/badComponent.png)<br/>
 Why Bad?
@@ -53,7 +53,7 @@ Why Bad?
 2. BAD flexibility, readability, not maintainable with props drilling
 3. Fixed usage of component, big chunk of code in a component hard coded how people can use it.
 
-##Stage 2: Compound Component Design Pattern
+## Stage 2: Compound Component Design Pattern
 ![GitHub Logo](/public/images/markdown/stageManagement/CCdp.jpg)<br/>
 ![GitHub Logo](/public/images/markdown/stageManagement/goodComponent.png)<br/>
 How good is this?
