@@ -47,7 +47,7 @@ Why not Context API: Context API is designed to be used to low update rate data.
 
 ##Stage 1: Big chunk of component makes use of prop drilling<br/>
 ![GitHub Logo](/public/images/markdown/stageManagement/oldComponentDesign.jpg)<br/>
-![GitHub Logo](/public/images/markdown/stageManagement/badComponent.jpg)<br/>
+![GitHub Logo](/public/images/markdown/stageManagement/badComponent.png)<br/>
 Why Bad?
 1. Confusing allocation of component in the component folder. Molecules / organism are hard to be understood and define.
 2. BAD flexibility, readability, not maintainable with props drilling
@@ -55,7 +55,7 @@ Why Bad?
 
 ##Stage 2: Compound Component Design Pattern
 ![GitHub Logo](/public/images/markdown/stageManagement/CCdp.jpg)<br/>
-![GitHub Logo](/public/images/markdown/stageManagement/goodComponent.jpg)<br/>
+![GitHub Logo](/public/images/markdown/stageManagement/goodComponent.png)<br/>
 How good is this?
 1. Compound Component makes use of composition, so the flexibility is really good as we can import different part of the component to build UI.
 2. Component parts (Jumbotron.Title / Jumbotron.Container) is compiled into the Jumbotron component jsx file and being saved as part of the Jumbotron object.
