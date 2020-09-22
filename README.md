@@ -20,14 +20,18 @@ Inside src folder
 
 - pages: Actual Page that renders Containers.
 
-- helpers
+- helpers: Help to do Conditional Routing, <IsUserRedirect> / <ProtectedRoute>
 
 - utils: Custom JavaScript only files e.g. selectionMap.js (Maybe used for doing data allocation.)
 
-- fixtures: json files used to drain data to the database
+- fixtures: json files used to drain data to the database or static data
 
 - constants: Constant variables like Routes url are saved here.
 
+### State Management Evolvement
+
+##Stage 1: redux + reselect
+![GitHub Logo](/public/images/hero.png)
 
 
 
