@@ -30,7 +30,7 @@ Inside src folder
 
 ### State Management Evolvement
 
-##Stage 1: redux + reselect
+##Stage 1: redux + reselect<br/>
 ![GitHub Logo](/public/images/markdown/state management/redux reselect.jpg)
 
 ##Stage 2: Added Hooks and context<br/>
