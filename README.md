@@ -31,7 +31,7 @@ Inside src folder
 ### State Management Evolvement
 
 ##Stage 1: redux + reselect
-![GitHub Logo](/images/hero.png)
+![GitHub Logo](/public/images/hero.png)
 
 
 
