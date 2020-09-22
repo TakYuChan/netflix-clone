@@ -31,7 +31,35 @@ Inside src folder
 ### State Management Evolvement
 
 ##Stage 1: redux + reselect<br/>
-![GitHub Logo](/public/images/markdown/state management/redux reselect.jpg)
+![GitHub Logo](/public/images/markdown/stateManagement/redux reselect.jpg)
+
+##Stage 2: Added Hooks and context<br/>
+![GitHub Logo](/public/images/markdown/stateManagement/hooks context.jpg)
+
+Get rid of class component by using hooks in the functional component.
+Stop putting everything into redux, instead of async operation (to backend) and global state.
+
+Async operation: Make use of middleware Saga which can provide better testibility.
+Global State: Custom hooks only be used for local state not global state to prevent props drilling
+Why not Context API: Context API is designed to be used to low update rate data.
+
+### Component Design Evolvement
+
+##Stage 1: Big chunk of component makes use of prop drilling<br/>
+![GitHub Logo](/public/images/markdown/stateMnagement/old component design.jpg)<br/>
+![GitHub Logo](/public/images/markdown/stateManagement/bad component.jpg)<br/>
+Why Bad?
+1. Confusing allocation of component in the component folder. Molecules / organism are hard to be understood and define.
+2. BAD flexibility, readability, not maintainable with props drilling
+3. Fixed usage of component, big chunk of code in a component hard coded how people can use it.
+
+##Stage 2: Compound Component Design Pattern
+![GitHub Logo](/public/images/markdown/stateManagement/Compound Component Design Pattern.jpg)<br/>
+![GitHub Logo](/public/images/markdown/stateManagement/good component.jpg)<br/>
+How good is this?
+1. Compound Component makes use of composition, so the flexibility is really good as we can import different part of the component to build UI.
+2. Component parts (Jumbotron.Title / Jumbotron.Container) is compiled into the Jumbotron component jsx file and being saved as part of the Jumbotron object.
+3. We use Container as a Organism but we can use it or compose a component in the page, very flexible and readable.
 
 
 ## Available Scripts
