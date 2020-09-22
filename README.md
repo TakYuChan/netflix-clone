@@ -41,7 +41,7 @@ Stop putting everything into redux, instead of async operation (to backend) and 
 
 Async operation: Make use of middleware Saga which can provide better testibility.
 Global State: Custom hooks only be used for local state not global state to prevent props drilling
-Why not Context API: Context API is designed to be used to low update rate data.
+Why not Context API: Context API is designed to be used to low updating rate data.
 
 ## Component Design Evolvement
 
