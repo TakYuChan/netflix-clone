@@ -20,7 +20,7 @@ Inside src folder
 
 - pages: Actual Page that renders Containers.
 
-- helpers: Help to do Conditional Routing, <IsUserRedirect> / <ProtectedRoute>
+- helpers: Help to do Conditional Routing, <IsUserRedirect> or <ProtectedRoute>
 
 - utils: Custom JavaScript only files e.g. selectionMap.js (Maybe used for doing data allocation.)
 
