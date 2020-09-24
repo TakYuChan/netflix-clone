@@ -28,6 +28,14 @@ Inside src folder
 
 - constants: Constant variables like Routes url are saved here.
 
+### Context vs Custom Hooks
+
+Custom Hooks: Use it for local states and never put it into a loop. Handle complicated state with useReducer.
+@Target: Suggested to use on container layer as we can inject the state without prop drilling directly.
+
+ContextAPI: Not that capable on dealing with high update rate stuff, so best use case will be Theme or language.
+@Target: I also use it on compound component to share implicit states.
+
 ## State Management Evolvement
 
 ### Stage 1: redux + reselect<br/>
